@@ -1,0 +1,1 @@
+java -cp "C:\Eliza;C:\Eliza\Eliza.class;C:\Eliza\STComm.jar" Eliza "theServer" "username" "password"

@@ -1,0 +1,15 @@
+** Eliza Bot - Ron Senykoff**
+** The Eliza methods / classes are thanks to http://philly.cyberloft.com/bgoerlic/eliza.htm **
+** I just made it into a SameTime bot **
+
+DIRECTIONS:
+1) You'll need the Sun JRE installed on your system. If you aren't sure, go to the command line and type "java -version" and see what results you get. If you got version info back that is 1.2 or later, skip to step 4. If you don't have it installed, go to http://java.sun.com/ or shortcut to this link: http://java.sun.com/j2se/1.3/download.html
+2) Once installed you should be able to open up a DOS command window and get a result when you type "java -version". If not, your system's PATH has not been set correctly. Don't fret... this is easy to do. If you got the version info back, skip to step 4
+3) Setting PATH. Right-click on "My Computer" and select "Properties." Go to the "Advanced" tab and click "Environment Variables." In the "System Variables" pane, scroll down until you see the "Path" variable. Click "Edit" and add the path to your JRE's bin folder. You need to put a semicolon in front of it to separate that value from any other Path values. My path only contains the folder to the bin, so mine looks like "C:\j2sdk1.4.1_02\bin" but if you added it after some other values it would be "C:\otherpath\other;C:\j2sdk1.4.1_02\bin"
+4) Modify runEliza.bat - runEliza.bat starts Eliza by setting the appropriate classpath values, as well as passing it the servername, username, and password. Open runEliza.bat in your favorite text editor (notepad is fine).
+
+java -cp "C:\Eliza;C:\Eliza\Eliza.class;C:\JavaCert\ElizaBot\Eliza\STComm.jar" Eliza "servername" "Joe User" "password"
+
+5) If you unzipped Eliza to C:\Eliza, then you should be OK. Otherwise, change all the paths here to make sense. Also, substitute in your appropriate servername, username, and password. Bots need to log in just like any other user. So it is best if they have their own ID. It is fun however, to log it in as yourself and watch the conversations people have with you! ;)
+6) Save runEliza.bat
+7) Now you can just double-click on runEliza.bat and if successful, you should see the bot log into sametime (the DOS window will say 'logged in' and you'll see the bot show up on SameTime).
